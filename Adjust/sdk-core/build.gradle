@@ -3,6 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 android {
+    namespace 'com.adjust.sdk'
     compileSdk rootProject.ext.coreCompileSdkVersion
 
     publishing {
@@ -24,7 +25,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'com.adjust.sdk'
 }
 
 // read local properties
@@ -115,9 +115,9 @@ afterEvaluate {
             maven {
                 if (rootProject.ext.coreVersionName.toString().contains('SNAPSHOT')) {
                     println "Using Maven SNAPSHOT repository for publishing"
-                    url "https://oss.sonatype.org/content/repositories/snapshots/"
+                    url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
                 } else {
-                    url "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+                    url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
                 }
                 if (project.hasProperty("sonatypeUsername")) {
                     credentials {
@@ -180,7 +180,7 @@ def customizePomForAar(pom) {
             resolveStrategy = Closure.DELEGATE_FIRST
             description 'The Adjust SDK for Android'
             name 'Adjust Android SDK'
-            url 'https://github.com/adjust/android_sdk'
+            url 'https://github.com/bumptechlab/adjust_sdk'
             packaging 'aar'
             organization {
                 name 'adjust GmbH'
@@ -193,9 +193,9 @@ def customizePomForAar(pom) {
                 }
             }
             scm {
-                url 'git@github.com:adjust/android_sdk.git'
-                connection 'scm:git:git@github.com:adjust/android_sdk.git'
-                developerConnection 'scm:git:git@github.com:adjust/android_sdk.git'
+                url 'git@github.com:bumptechlab/adjust_sdk.git'
+                connection 'scm:git:git@github.com:bumptechlab/adjust_sdk.git'
+                developerConnection 'scm:git:git@github.com:bumptechlab/adjust_sdk.git'
             }
             developers {
                 developer {

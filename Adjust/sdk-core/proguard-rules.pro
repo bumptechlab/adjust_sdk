@@ -15,7 +15,7 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-#-keep public class com.adjust.sdk.** { *; }
+-keep public class com.adjust.sdk.** { *; }
 -keep class com.adjust.sdk.DeviceInfo**
 -keepclassmembers class com.adjust.sdk.DeviceInfo** {*;}
 -keep class com.google.android.gms.common.ConnectionResult {

@@ -1,3 +1,5 @@
+# proguard rules for adjust-sdk of bumptechlab as below
+
 #-keep public class com.adjust.sdk.** { *; }
 -keep class com.adjust.sdk.DeviceInfo**
 -keepclassmembers class com.adjust.sdk.DeviceInfo** {*;}
