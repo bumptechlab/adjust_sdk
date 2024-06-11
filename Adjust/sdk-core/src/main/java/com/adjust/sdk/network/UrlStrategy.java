@@ -9,9 +9,6 @@ import java.util.List;
 
 import static com.adjust.sdk.AdjustConfig.DATA_RESIDENCY_TR;
 import static com.adjust.sdk.AdjustConfig.DATA_RESIDENCY_US;
-import static com.adjust.sdk.AdjustConfig.URL_STRATEGY_CHINA;
-import static com.adjust.sdk.AdjustConfig.URL_STRATEGY_CN;
-import static com.adjust.sdk.AdjustConfig.URL_STRATEGY_CN_ONLY;
 import static com.adjust.sdk.AdjustConfig.URL_STRATEGY_INDIA;
 import static com.adjust.sdk.AdjustConfig.DATA_RESIDENCY_EU;
 
@@ -21,15 +18,15 @@ public class UrlStrategy {
     private static final String SUBSCRIPTION_URL_INDIA = "https://subscription.adjust.net.in";
     private static final String PURCHASE_VERIFICATION_URL_INDIA = "https://ssrv.adjust.net.in";
 
-    private static final String BASE_URL_CHINA = "https://app.adjust.world";
-    private static final String GDPR_URL_CHINA = "https://gdpr.adjust.world";
-    private static final String SUBSCRIPTION_URL_CHINA = "https://subscription.adjust.world";
-    private static final String PURCHASE_VERIFICATION_URL_CHINA = "https://ssrv.adjust.world";
+//    private static final String BASE_URL_CHINA = "https://app.adjust.world";
+//    private static final String GDPR_URL_CHINA = "https://gdpr.adjust.world";
+//    private static final String SUBSCRIPTION_URL_CHINA = "https://subscription.adjust.world";
+//    private static final String PURCHASE_VERIFICATION_URL_CHINA = "https://ssrv.adjust.world";
 
-    private static final String BASE_URL_CN = "https://app.adjust.cn";
-    private static final String GDPR_URL_CN = "https://gdpr.adjust.cn";
-    private static final String SUBSCRIPTION_URL_CN = "https://subscription.adjust.cn";
-    private static final String PURCHASE_VERIFICATION_URL_CN = "https://ssrv.adjust.cn";
+//    private static final String BASE_URL_CN = "https://app.adjust.cn";
+//    private static final String GDPR_URL_CN = "https://gdpr.adjust.cn";
+//    private static final String SUBSCRIPTION_URL_CN = "https://subscription.adjust.cn";
+//    private static final String PURCHASE_VERIFICATION_URL_CN = "https://ssrv.adjust.cn";
 
     private static final String BASE_URL_EU = "https://app.eu.adjust.com";
     private static final String GDPR_URL_EU = "https://gdpr.eu.adjust.com";
@@ -157,51 +154,58 @@ public class UrlStrategy {
     private static List<String> baseUrlChoices(final String urlStrategy) {
         if (URL_STRATEGY_INDIA.equals(urlStrategy)) {
             return Arrays.asList(BASE_URL_INDIA, Constants.BASE_URL);
-        } else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
-            return Arrays.asList(BASE_URL_CHINA, Constants.BASE_URL);
-        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
-            return Arrays.asList(BASE_URL_CN, Constants.BASE_URL);
-        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
-            return Arrays.asList(BASE_URL_CN);
-        } else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
+
+        }
+//        else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
+//            return Arrays.asList(BASE_URL_CHINA, Constants.BASE_URL);
+//        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
+//            return Arrays.asList(BASE_URL_CN, Constants.BASE_URL);
+//        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
+//            return Arrays.asList(BASE_URL_CN);
+//        }
+        else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
             return Collections.singletonList(BASE_URL_EU);
         } else if (DATA_RESIDENCY_TR.equals(urlStrategy)) {
             return Collections.singletonList(BASE_URL_TR);
         } else if (DATA_RESIDENCY_US.equals(urlStrategy)) {
             return Collections.singletonList(BASE_URL_US);
         } else {
-            return Arrays.asList(Constants.BASE_URL, BASE_URL_INDIA, BASE_URL_CHINA);
+            return Arrays.asList(Constants.BASE_URL, BASE_URL_INDIA);
         }
     }
     private static List<String> gdprUrlChoices(final String urlStrategy) {
         if (URL_STRATEGY_INDIA.equals(urlStrategy)) {
             return Arrays.asList(GDPR_URL_INDIA, Constants.GDPR_URL);
-        } else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
-            return Arrays.asList(GDPR_URL_CHINA, Constants.GDPR_URL);
-        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
-            return Arrays.asList(GDPR_URL_CN, Constants.GDPR_URL);
-        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
-            return Arrays.asList(GDPR_URL_CN);
-        } else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
+        }
+//        else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
+//            return Arrays.asList(GDPR_URL_CHINA, Constants.GDPR_URL);
+//        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
+//            return Arrays.asList(GDPR_URL_CN, Constants.GDPR_URL);
+//        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
+//            return Arrays.asList(GDPR_URL_CN);
+//        }
+        else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
             return Collections.singletonList(GDPR_URL_EU);
         } else if (DATA_RESIDENCY_TR.equals(urlStrategy)) {
             return Collections.singletonList(GDPR_URL_TR);
         } else if (DATA_RESIDENCY_US.equals(urlStrategy)) {
             return Collections.singletonList(GDPR_URL_US);
         } else {
-            return Arrays.asList(Constants.GDPR_URL, GDPR_URL_INDIA, GDPR_URL_CHINA);
+            return Arrays.asList(Constants.GDPR_URL, GDPR_URL_INDIA);
         }
     }
     private static List<String> subscriptionUrlChoices(final String urlStrategy) {
         if (URL_STRATEGY_INDIA.equals(urlStrategy)) {
             return Arrays.asList(SUBSCRIPTION_URL_INDIA, Constants.SUBSCRIPTION_URL);
-        } else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
-            return Arrays.asList(SUBSCRIPTION_URL_CHINA, Constants.SUBSCRIPTION_URL);
-        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
-            return Arrays.asList(SUBSCRIPTION_URL_CN, Constants.SUBSCRIPTION_URL);
-        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
-            return Arrays.asList(SUBSCRIPTION_URL_CN);
-        } else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
+        }
+//        else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
+//            return Arrays.asList(SUBSCRIPTION_URL_CHINA, Constants.SUBSCRIPTION_URL);
+//        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
+//            return Arrays.asList(SUBSCRIPTION_URL_CN, Constants.SUBSCRIPTION_URL);
+//        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
+//            return Arrays.asList(SUBSCRIPTION_URL_CN);
+//        }
+        else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
             return Collections.singletonList(SUBSCRIPTION_URL_EU);
         } else if (DATA_RESIDENCY_TR.equals(urlStrategy)) {
             return Collections.singletonList(SUBSCRIPTION_URL_TR);
@@ -209,20 +213,21 @@ public class UrlStrategy {
             return Collections.singletonList(SUBSCRIPTION_URL_US);
         } else {
             return Arrays.asList(Constants.SUBSCRIPTION_URL,
-                    SUBSCRIPTION_URL_INDIA,
-                    SUBSCRIPTION_URL_CHINA);
+                    SUBSCRIPTION_URL_INDIA);
         }
     }
     private static List<String> purchaseVerificationUrlChoices(final String urlStrategy) {
         if (URL_STRATEGY_INDIA.equals(urlStrategy)) {
             return Arrays.asList(PURCHASE_VERIFICATION_URL_INDIA, Constants.PURCHASE_VERIFICATION_URL);
-        } else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
-            return Arrays.asList(PURCHASE_VERIFICATION_URL_CHINA, Constants.PURCHASE_VERIFICATION_URL);
-        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
-            return Arrays.asList(PURCHASE_VERIFICATION_URL_CN, Constants.PURCHASE_VERIFICATION_URL);
-        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
-            return Arrays.asList(PURCHASE_VERIFICATION_URL_CN);
-        } else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
+        }
+//        else if (URL_STRATEGY_CHINA.equals(urlStrategy)) {
+//            return Arrays.asList(PURCHASE_VERIFICATION_URL_CHINA, Constants.PURCHASE_VERIFICATION_URL);
+//        } else if (URL_STRATEGY_CN.equals(urlStrategy)) {
+//            return Arrays.asList(PURCHASE_VERIFICATION_URL_CN, Constants.PURCHASE_VERIFICATION_URL);
+//        } else if (URL_STRATEGY_CN_ONLY.equals(urlStrategy)) {
+//            return Arrays.asList(PURCHASE_VERIFICATION_URL_CN);
+//        }
+        else if (DATA_RESIDENCY_EU.equals(urlStrategy)) {
             return Collections.singletonList(PURCHASE_VERIFICATION_URL_EU);
         } else if (DATA_RESIDENCY_TR.equals(urlStrategy)) {
             return Collections.singletonList(PURCHASE_VERIFICATION_URL_TR);
@@ -230,8 +235,7 @@ public class UrlStrategy {
             return Collections.singletonList(PURCHASE_VERIFICATION_URL_US);
         } else {
             return Arrays.asList(Constants.PURCHASE_VERIFICATION_URL,
-                    PURCHASE_VERIFICATION_URL_INDIA,
-                    PURCHASE_VERIFICATION_URL_CHINA);
+                    PURCHASE_VERIFICATION_URL_INDIA);
         }
     }
 }
