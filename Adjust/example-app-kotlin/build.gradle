@@ -12,10 +12,25 @@ android {
 
     }
 
-    buildTypes {
+    signingConfigs {
         release {
+            storeFile file("./keystore/adjust.jks")
+            storePassword "adjust"
+            keyAlias "adjust"
+            keyPassword "adjust"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 

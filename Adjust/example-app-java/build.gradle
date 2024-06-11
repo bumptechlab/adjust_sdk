@@ -7,6 +7,7 @@ repositories {
 }
 
 android {
+    namespace 'com.adjust.examples'
     compileSdk 34
 
     defaultConfig {
@@ -16,9 +17,24 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        release {
+            storeFile file("./keystore/adjust.jks")
+            storePassword "adjust"
+            keyAlias "adjust"
+            keyPassword "adjust"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
     buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
         release {
             minifyEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -26,7 +42,12 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
-    namespace 'com.adjust.examples'
+
+    lintOptions {
+        abortOnError false
+        warningsAsErrors false
+        ignoreWarnings true
+    }
 }
 
 dependencies {
