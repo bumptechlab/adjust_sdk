@@ -20,14 +20,14 @@ android {
         minSdkVersion rootProject.ext.samsungCloudDevMinSdkVersion
         targetSdkVersion rootProject.ext.coreTargetSdkVersion
     }
-    namespace 'com.adjust.sdk.samsung.clouddev'
+    namespace 'com.bumptechlab.sdk.samsung.clouddev'
 }
 
 dependencies {
     // Add SDK via module.
     compileOnly project(':sdk-core')
     // Add SDK via Maven.
-    // implementation 'com.adjust.sdk:adjust-android:4.38.4'
+    // implementation 'io.github.bumptechlab:adjust-android:4.38.4.2'
 
     // Add Samsung clouddev lib.
     compileOnly fileTree(include: ['*.aar'], dir: 'libs')

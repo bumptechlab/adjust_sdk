@@ -10,7 +10,7 @@ android {
     defaultConfig {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    namespace 'com.adjust.sdk.test'
+    namespace 'com.bumptech.sdk.test'
 }
 
 repositories {

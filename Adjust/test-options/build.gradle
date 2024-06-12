@@ -9,7 +9,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 34
     }
-    namespace 'com.adjust.test_options'
+    namespace 'com.bumptech.test_options'
 }
 
 dependencies {

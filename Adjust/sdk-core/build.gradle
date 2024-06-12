@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 android {
-    namespace 'com.adjust.sdk'
+    namespace 'com.bumptech.sdk'
     compileSdk rootProject.ext.coreCompileSdkVersion
 
     publishing {

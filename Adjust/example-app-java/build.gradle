@@ -7,11 +7,11 @@ repositories {
 }
 
 android {
-    namespace 'com.adjust.examples'
+    namespace 'com.bumptech.examples'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.adjust.examples"
+        applicationId "com.bumptech.examples"
         minSdkVersion 14
         targetSdkVersion 34
         versionCode 1

@@ -22,7 +22,7 @@ android {
         minSdkVersion rootProject.ext.webbridgeMinSdkVersion
         targetSdkVersion rootProject.ext.coreTargetSdkVersion
     }
-    namespace 'com.adjust.sdk.webbridge'
+    namespace 'com.bumptech.sdk.webbridge'
 }
 
 dependencies {
@@ -30,7 +30,7 @@ dependencies {
     // Add SDK via module.
     compileOnly project(':sdk-core')
     // Add SDK via Maven.
-    // implementation 'com.adjust.sdk:adjust-android:4.38.4'
+    // implementation 'io.github.bumptechlab:adjust-android:4.38.4.2'
 }
 
 // read local properties

@@ -4,7 +4,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.adjust.sdk.test"
+        applicationId "com.bumptech.sdk.test"
         targetSdkVersion 34
         minSdkVersion 9
 
@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'com.adjust.sdk.test'
+    namespace 'com.bumptech.sdk.test'
 }
 
 dependencies {

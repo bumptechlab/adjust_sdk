@@ -12,8 +12,8 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.adjust.sdk.Adjust;
-import com.adjust.sdk.webbridge.AdjustBridge;
+import com.bumptech.sdk.Adjust;
+import com.bumptech.sdk.webbridge.AdjustBridge;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;

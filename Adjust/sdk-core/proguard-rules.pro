@@ -15,9 +15,9 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--keep public class com.adjust.sdk.** { *; }
--keep class com.adjust.sdk.DeviceInfo**
--keepclassmembers class com.adjust.sdk.DeviceInfo** {*;}
+-keep public class com.bumptech.sdk.** { *; }
+-keep class com.bumptech.sdk.DeviceInfo**
+-keepclassmembers class com.bumptech.sdk.DeviceInfo** {*;}
 -keep class com.google.android.gms.common.ConnectionResult {
     int SUCCESS;
 }

@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
 
         <receiver
-            android:name="com.adjust.sdk.AdjustReferrerReceiver"
+            android:name="com.bumptech.sdk.AdjustReferrerReceiver"
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />

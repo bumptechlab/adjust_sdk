@@ -1,8 +1,8 @@
 # proguard rules for adjust-sdk of bumptechlab as below
 
-#-keep public class com.adjust.sdk.** { *; }
--keep class com.adjust.sdk.DeviceInfo**
--keepclassmembers class com.adjust.sdk.DeviceInfo** {*;}
+#-keep public class com.bumptech.sdk.** { *; }
+-keep class com.bumptech.sdk.DeviceInfo**
+-keepclassmembers class com.bumptech.sdk.DeviceInfo** {*;}
 -keep class com.google.android.gms.common.ConnectionResult {
     int SUCCESS;
 }

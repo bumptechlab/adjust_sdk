@@ -25,7 +25,7 @@ android {
         minSdkVersion rootProject.ext.coreMinSdkVersion
         targetSdkVersion rootProject.ext.coreTargetSdkVersion
     }
-    namespace 'com.adjust.sdk.oaid'
+    namespace 'com.bumptech.sdk.oaid'
 }
 
 dependencies {
@@ -33,7 +33,7 @@ dependencies {
     // Add SDK via module.
     compileOnly project(':sdk-core')
     // Add SDK via Maven.
-    // implementation 'com.adjust.sdk:adjust-android:4.38.4'
+    // implementation 'io.github.bumptechlab:adjust-android:4.38.4.2'
     implementation 'com.huawei.hms:ads-identifier:3.4.56.300'
 }
 

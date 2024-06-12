@@ -5,13 +5,13 @@ import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
-import com.adjust.sdk.Adjust;
-import com.adjust.sdk.AdjustFactory;
-import com.adjust.sdk.AdjustTestOptions;
-import com.adjust.sdk.webbridge.AdjustBridgeUtil;
-import com.adjust.test.ICommandRawJsonListener;
-import com.adjust.test.TestLibrary;
-import com.adjust.test_options.TestConnectionOptions;
+import com.bumptech.sdk.Adjust;
+import com.bumptech.sdk.AdjustFactory;
+import com.bumptech.sdk.AdjustTestOptions;
+import com.bumptech.sdk.webbridge.AdjustBridgeUtil;
+import com.bumptech.test.ICommandRawJsonListener;
+import com.bumptech.test.TestLibrary;
+import com.bumptech.test_options.TestConnectionOptions;
 
 import org.json.JSONObject;
 
