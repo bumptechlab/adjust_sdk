@@ -4,7 +4,7 @@ apply plugin: 'signing'
 
 repositories {
     maven {
-        url "https://oss.sonatype.org/content/repositories/staging/"
+        url "https://s01.oss.sonatype.org/content/repositories/staging/"
     }
 }
 
@@ -106,7 +106,7 @@ afterEvaluate {
 
         repositories {
             maven {
-                url "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+                url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
                 if (project.hasProperty("sonatypeUsername")) {
                     credentials {
                         username sonatypeUsername
@@ -131,11 +131,11 @@ def customizePomForJar(pom) {
             resolveStrategy = Closure.DELEGATE_FIRST
             description 'The Imei plugin for Adjust SDK for Android'
             name 'Adjust Android SDK Imei plugin'
-            url 'https://github.com/adjust/android_sdk'
+            url 'https://github.com/bumptechlab/adjust_sdk'
 
             organization {
-                name 'adjust GmbH'
-                url 'http://www.adjust.com'
+                name 'bumptech'
+                url 'https://github.com/bumptechlab/adjust_sdk'
             }
             licenses {
                 license {
@@ -144,18 +144,14 @@ def customizePomForJar(pom) {
                 }
             }
             scm {
-                url 'git@github.com:adjust/android_sdk.git'
-                connection 'scm:git:git@github.com:adjust/android_sdk.git'
-                developerConnection 'scm:git:git@github.com:adjust/android_sdk.git'
+                url 'git@github.com:bumptechlab/adjust_sdk.git'
+                connection 'scm:git:git@github.com:bumptechlab/adjust_sdk.git'
+                developerConnection 'scm:git:git@github.com:bumptechlab/adjust_sdk.git'
             }
             developers {
                 developer {
-                    name 'Pedro Silva'
-                    email 'pedro@adjust.com'
-                }
-                developer {
-                    name 'Ugljesa Erceg'
-                    email 'ugljesa@adjust.com'
+                    name 'Barney'
+                    email 'Barney.P@quest-tech.ai'
                 }
             }
         }
@@ -171,11 +167,11 @@ def customizePomForAar(pom) {
             resolveStrategy = Closure.DELEGATE_FIRST
             description 'The Imei plugin for Adjust SDK for Android'
             name 'Adjust Android SDK Imei plugin'
-            url 'https://github.com/adjust/android_sdk'
+            url 'https://github.com/bumptechlab/adjust_sdk'
 
             organization {
-                name 'adjust GmbH'
-                url 'http://www.adjust.com'
+                name 'bumptech'
+                url 'https://github.com/bumptechlab/adjust_sdk'
             }
             licenses {
                 license {
@@ -184,18 +180,14 @@ def customizePomForAar(pom) {
                 }
             }
             scm {
-                url 'git@github.com:adjust/android_sdk.git'
-                connection 'scm:git:git@github.com:adjust/android_sdk.git'
-                developerConnection 'scm:git:git@github.com:adjust/android_sdk.git'
+                url 'git@github.com:bumptechlab/adjust_sdk.git'
+                connection 'scm:git:git@github.com:bumptechlab/adjust_sdk.git'
+                developerConnection 'scm:git:git@github.com:bumptechlab/adjust_sdk.git'
             }
             developers {
                 developer {
-                    name 'Pedro Silva'
-                    email 'pedro@adjust.com'
-                }
-                developer {
-                    name 'Ugljesa Erceg'
-                    email 'ugljesa@adjust.com'
+                    name 'Barney'
+                    email 'Barney.P@quest-tech.ai'
                 }
             }
         }
