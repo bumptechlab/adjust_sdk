@@ -211,7 +211,7 @@ var Adjust = {
         if (this.adjustConfig) {
             return this.adjustConfig.getSdkPrefix();
         } else {
-            return 'web-bridge4.38.4.2';
+            return 'web-bridge4.38.4';//这个版本不能随便改，会上传到服务器校验
         }
     },
 

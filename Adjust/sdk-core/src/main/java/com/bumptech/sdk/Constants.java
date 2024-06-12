@@ -30,7 +30,7 @@ public interface Constants {
 
     String SCHEME = "https";
     String AUTHORITY = "app.adjust.com";
-    String CLIENT_SDK = "android4.38.4.2";
+    String CLIENT_SDK = "android4.38.4";//这个版本不能随便改，会上传到服务器校验
     String LOGTAG = "Adjust";
     String REFTAG = "reftag";
     String INSTALL_REFERRER = "install_referrer";

@@ -53,7 +53,7 @@ public class TestActivityPackage {
         // default values
         appToken = "123456789012";
         environment = "sandbox";
-        clientSdk = "android4.38.4.2";
+        clientSdk = "android4.38.4"; //这个版本不能随便改，会上传到服务器校验
         suffix = "";
         attribution = new AdjustAttribution();
         playServices = true;
