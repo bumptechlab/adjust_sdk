@@ -1,8 +1,16 @@
 # proguard rules for adjust-sdk of bumptechlab as below
 
-#-keep public class com.bumptech.sdk.** { *; }
 -keep class com.bumptech.sdk.DeviceInfo**
 -keepclassmembers class com.bumptech.sdk.DeviceInfo** {*;}
+-keep class com.bumptech.sdk.play.InstallReferrer { *; }
+-keep class com.bumptech.sdk.sig.Signer { *; }
+-keep class com.bumptech.sdk.imei.Util { *; }
+-keep class com.bumptech.sdk.oaid.Util { *; }
+-keep class com.bumptech.sdk.samsung.Util { *; }
+-keep class com.bumptech.sdk.samsung.clouddev.Util { *; }
+-keep class com.bumptech.sdk.xiaomi.Util { *; }
+-keep class com.bumptech.sdk.vivo.Util { *; }
+
 -keep class com.google.android.gms.common.ConnectionResult {
     int SUCCESS;
 }
